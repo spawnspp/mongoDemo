@@ -1,5 +1,6 @@
 FROM openjdk:8
-RUN yum install -y maven
+RUN apt-get update
+RUN apt-get -y install maven
 RUN mkdir /mongoDemo
 WORKDIR /mongoDemo
 RUN maven package
